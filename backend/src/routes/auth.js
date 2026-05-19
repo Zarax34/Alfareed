@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
-router.post('/register', (req, res) => res.json({ message: 'User registered (Mock)' }));
-router.post('/login', (req, res) => res.json({ token: 'mock-token', role: 'admin' }));
-
+const authController = require('../controllers/authController');
+router.post('/register', authController.register);
+router.post('/login', authController.login);
 module.exports = router;

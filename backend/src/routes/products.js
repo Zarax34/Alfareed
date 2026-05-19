@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
-
-router.get('/', (req, res) => res.json([{ id: 1, name: 'Sider Honey', price: 100 }]));
-
+const productController = require('../controllers/productController');
+const { verifyToken, isAdmin } = require('../middlewares/authMiddleware');
+router.get('/', productController.getAllProducts);
+router.post('/', verifyToken, isAdmin, productController.createProduct);
+router.put('/:id', verifyToken, isAdmin, productController.updateProduct);
+router.delete('/:id', verifyToken, isAdmin, productController.deleteProduct);
 module.exports = router;
