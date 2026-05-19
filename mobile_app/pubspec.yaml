@@ -1,0 +1,12 @@
+name: al_farid_honey
+description: Al-Farid Honey App
+version: 1.0.0+1
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+dependencies:
+  flutter: {sdk: flutter}
+  dio: ^5.3.0
+  flutter_bloc: ^8.1.3
+  firebase_messaging: ^14.6.6
+flutter:
+  uses-material-design: true
