@@ -1,4 +1,4 @@
-package com.alfareed.alfareed_honey
+package com.example.alfareed_honey
 
 import io.flutter.embedding.android.FlutterActivity
 
